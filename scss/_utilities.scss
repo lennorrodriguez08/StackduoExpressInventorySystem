@@ -1,0 +1,137 @@
+.container {
+   max-width: 1100px;
+   margin: auto;
+   padding: 20px;
+}
+
+.text-center {
+   text-align: center;
+}
+
+.m-1 {
+   margin: 10px;
+}
+
+.m-2 {
+   margin: 20px;
+}
+
+.m-3 {
+   margin: 30px;
+}
+
+.my-1 {
+   margin: 10px 0;
+}
+
+.my-2 {
+   margin: 20px 0;
+}
+
+.my-3 {
+   margin: 30px 0;
+}
+
+.p-1 {
+   padding: 10px;
+}
+
+.p-2 {
+   padding: 20px;
+}
+
+.p-3 {
+   padding: 30px;
+}
+
+@mixin flex ($justify-content) {
+   display: flex;
+   align-items: center;
+   justify-content: $justify-content;
+}
+
+%btn-shared {
+   display: inline-block;
+   padding: 8px 50px;
+   color: #fff;
+   border-radius: 5px;
+}
+
+%action-btn-shared {
+   display: inline-block;
+   padding: 5px;
+   color: #fff;
+   width: 75px;
+   margin: 0 0 3px;
+   border-radius: 5px;
+   text-align: center;
+
+   &:hover {
+      opacity: 0.9;
+   }
+}
+
+.action {
+
+   &-edit {
+      @extend %action-btn-shared;
+      background: #008148;
+
+   }
+
+   &-delete {
+      @extend %action-btn-shared;
+      background: #E71D36;
+
+   }
+
+   
+}
+
+.btn {
+
+   &-confirm {
+      @extend %btn-shared;
+      background: #284B63;
+
+      &:hover {
+         opacity: 0.9;
+      }
+   }
+
+   &-save {
+      @extend %btn-shared;
+      background: #429EA6;
+      width: 200px;
+      padding: 8px 0;
+      text-align: center;
+
+      &:hover {
+         opacity: 0.9;
+      }
+   }
+
+   &-print {
+      @extend %btn-shared;
+      background: #284B63;
+      width: 200px;
+      padding: 8px 0;
+      text-align: center;
+
+      &:hover {
+         opacity: 0.9;
+      }
+   }
+
+   &-cancel {
+      @extend %btn-shared;
+      background: #353535;
+      width: 200px;
+      padding: 8px 0;
+      text-align: center;
+
+      &:hover {
+         opacity: 0.9;
+      }
+   }
+}

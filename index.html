@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   
+   <title>Stackduo Inventory System</title>
+   <link rel="stylesheet" href="./css/main.css">
+   <script src="https://kit.fontawesome.com/34a28b49e2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <header id="header">
+      <div class="container">
+         <h1 class="text-center">Stackduo Express Inventory System</h1>
+         <form action="">
+            <div class="info-container">
+               <div>
+                  <label for="">Select Item</label>
+                  <select name="" class="select-item">
+                     <option value="Monitor">Monitor</option>
+                     <option value="System Unit">System Unit</option>
+                     <option value="Desktop Memory">Desktop Memory</option>
+                     <option value="AVR">AVR</option>
+                     <option value="Mouse">Mouse</option>
+                     <option value="Keyboard">Keyboard</option>
+                     <option value="Headset">Headset</option>
+                  </select>
+               </div>
+               <div>
+                  <label for="">Quantity</label>
+                  <input type="number" name="" class="qty">
+               </div>
+               <div>
+                  <label for="">Price</label>
+                  <input type="number" name="" class="price">
+               </div>
+            </div>
+            <div>
+               <a href="#" class="btn btn-confirm">Confirm Order</a>
+            </div>
+         </form>
+      </div>
+   </header>
+   <section id="table">
+      <div class="container">
+         <div class="line my-1"></div>
+         <p class="my-3">List of orders</p>
+         <table>
+            <thead>
+               <tr>
+                  <th>Transaction Date</th>
+                  <th>Quantity</th>
+                  <th>Item Name</th>
+                  <th>Price</th>
+                  <th>Action</th>
+               </tr>
+            </thead>
+            <tbody class="order-list"></tbody>
+         </table>
+         <div class="computation">
+            <div>
+               <label for="">Total Amount</label>
+               <input type="number" class="total-amount" disabled>
+            </div>
+            <div>
+               <label for="">Received Amount</label>
+               <input type="number" class="received-amount">
+            </div>
+            <div>
+               <label for="">Total Balance</label>
+               <input type="number" class="total-balance" disabled>
+            </div>
+         </div>
+         <div class="order-btn my-1">
+            <a href="#" class="btn btn-save m-1">Save</a>
+            <a href="#" class="btn btn-print m-1">Print Invoice</a>
+            <a href="#" class="btn btn-cancel m-1">Cancel</a>
+         </div>
+      </div>
+   </section>
+   <section class="edit-modal">
+      <div class="modal-container">
+         <div class="title">
+            <p>Edit Orders</p>
+            <i class="fas fa-times"></i>
+         </div>
+         <div class="modal-content">
+            <div>
+               <label for="">Quantity</label>
+               <input type="number" class="modal-qty">
+            </div>
+            <div>
+               <label for="">Item Name</label>
+                  <select name="" class="select-item modal-item-name">
+                     <option value="Monitor">Monitor</option>
+                     <option value="System Unit">System Unit</option>
+                     <option value="Desktop Memory">Desktop Memory</option>
+                     <option value="AVR">AVR</option>
+                     <option value="Mouse">Mouse</option>
+                     <option value="Keyboard">Keyboard</option>
+                     <option value="Headset">Headset</option>
+                  </select>
+            </div>
+            <div>
+               <label for="">Price</label>
+               <input type="number" class="modal-price">
+            </div>
+         </div>
+         <div class="modal-btns">
+            <a href="#" class="btn action-edit modal-confirm">Confirm</a>
+            <a href="#" class="btn action-delete">Cancel</a>
+         </div>
+      </div>
+   </section>
+   <script src="./dist/js/script.js"></script>
+</body>
+</html>

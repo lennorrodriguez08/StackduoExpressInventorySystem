@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-width: 1100px;
+}
+
+*, *::after, *::before {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+input, select {
+  font-size: 15px;
+  padding: 3px 5px;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background: #fff;
+  color: #353535;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.m-1 {
+  margin: 10px;
+}
+
+.m-2 {
+  margin: 20px;
+}
+
+.m-3 {
+  margin: 30px;
+}
+
+.my-1 {
+  margin: 10px 0;
+}
+
+.my-2 {
+  margin: 20px 0;
+}
+
+.my-3 {
+  margin: 30px 0;
+}
+
+.p-1 {
+  padding: 10px;
+}
+
+.p-2 {
+  padding: 20px;
+}
+
+.p-3 {
+  padding: 30px;
+}
+
+.btn-confirm, .btn-save, .btn-print, .btn-cancel {
+  display: inline-block;
+  padding: 8px 50px;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.action-edit, .action-delete {
+  display: inline-block;
+  padding: 5px;
+  color: #fff;
+  width: 75px;
+  margin: 0 0 3px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.action-edit:hover, .action-delete:hover {
+  opacity: 0.9;
+}
+
+.action-edit {
+  background: #008148;
+}
+
+.action-delete {
+  background: #E71D36;
+}
+
+.btn-confirm {
+  background: #284B63;
+}
+
+.btn-confirm:hover {
+  opacity: 0.9;
+}
+
+.btn-save {
+  background: #429EA6;
+  width: 200px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.btn-save:hover {
+  opacity: 0.9;
+}
+
+.btn-print {
+  background: #284B63;
+  width: 200px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.btn-print:hover {
+  opacity: 0.9;
+}
+
+.btn-cancel {
+  background: #353535;
+  width: 200px;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.btn-cancel:hover {
+  opacity: 0.9;
+}
+
+#header {
+  color: #429EA6;
+}
+
+#header .info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 30px 0 25px;
+}
+
+#header .info-container label {
+  display: inline-block;
+  margin-right: 10px;
+  color: #353535;
+}
+
+#header .info-container select, #header .info-container input {
+  height: 30px;
+  border: 1px solid #aaa;
+  border-radius: 3px;
+  text-align: center;
+}
+
+#header .info-container select:focus, #header .info-container input:focus {
+  outline: none;
+}
+
+#header form div:nth-child(2) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+#table .line {
+  height: 1px;
+  width: 100%;
+  background: #aaa;
+}
+
+#table p {
+  color: #429EA6;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+#table table th {
+  min-width: 220px;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 20px;
+  color: #353535;
+}
+
+#table table td {
+  padding: 0 5px;
+  border: 0;
+  border-bottom: 1px solid #aaa;
+  border-left: 1px solid #aaa;
+  text-align: center;
+}
+
+#table table tr td:last-child {
+  border-right: 1px solid #aaa;
+}
+
+#table .order-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+#table .order-btn .btn-save {
+  margin-left: 0 !important;
+}
+
+#table .computation {
+  margin-top: 20px;
+}
+
+#table .computation label {
+  display: block;
+}
+
+#table .computation input {
+  text-align: center;
+}
+
+.edit-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background: #333;
+  display: none;
+  -webkit-animation-name: popUpModal;
+          animation-name: popUpModal;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+  opacity: 0.9;
+}
+
+.edit-modal .modal-content label, .edit-modal .modal-content input, .edit-modal .modal-content select {
+  display: block;
+  width: 100%;
+}
+
+.edit-modal .modal-content input {
+  text-align: center;
+  margin-top: 3px;
+}
+
+.edit-modal .modal-container {
+  width: 300px;
+  background: #fff;
+  margin: 16% auto 0;
+  padding: 20px;
+}
+
+.edit-modal .modal-container .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.edit-modal .modal-container .title i {
+  font-size: 23px;
+}
+
+.edit-modal .modal-container .title i:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+.edit-modal .modal-container .title p {
+  color: #429EA6;
+  font-size: 19px;
+}
+
+.edit-modal .modal-btns {
+  margin-top: 15px;
+  text-align: center;
+}
+
+.edit-modal .modal-btns .btn {
+  width: 120px;
+}
+
+.to-alert {
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+  width: 370px;
+  border-radius: 5px;
+  margin: 0 auto 5px;
+}
+
+@-webkit-keyframes popUpModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+
+@keyframes popUpModal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.9;
+  }
+}
+/*# sourceMappingURL=main.css.map */

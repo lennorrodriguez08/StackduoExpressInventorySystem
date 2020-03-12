@@ -1,0 +1,180 @@
+@import 'reset';
+@import 'utilities';
+@import 'variables';
+
+
+// HEADER
+#header {
+   color: $header-txt;
+
+   .info-container {
+      @include flex(space-between);
+      margin: 30px 0 25px;
+
+      label {
+         display: inline-block;
+         margin-right: 10px;
+         color: #353535;
+      }
+      
+      select, input {
+         height: 30px;
+         border: 1px solid #aaa;
+         border-radius: 3px;
+         text-align: center;
+
+         &:focus {
+            outline: none;
+         }
+      }
+   }
+
+   form div:nth-child(2) {
+      display: flex;
+      justify-content: flex-end;
+   }
+}
+
+// SECTION TABLE
+#table {
+   .line {
+      height: 1px;
+      width: 100%;
+      background: #aaa;
+      
+   }
+
+   p {
+      color: $header-txt;
+      font-size: 20px;
+      font-weight: bold;
+   }
+
+   table {
+
+      th {
+         min-width: 220px;
+         border: 0;
+         border-bottom: 1px solid #aaa;
+         padding-bottom: 20px;
+         color: $dark-txt;
+      }
+
+      td {
+         padding: 0 5px;
+         border: 0;
+         border-bottom: 1px solid #aaa;
+         border-left: 1px solid #aaa;
+         text-align: center;
+      }
+
+      tr td:last-child {
+         border-right: 1px solid #aaa;
+      }
+   }
+
+   .order-btn {
+      display: flex;
+      justify-content: flex-start;
+
+      .btn-save {
+         margin-left: 0!important;
+      }
+   }
+
+   .computation {
+      margin-top: 20px;
+
+      label {
+         display: block;
+      }
+
+      input {
+         text-align: center;
+      }
+   }
+}
+
+
+// SECTION EDIT-MODAL
+.edit-modal {
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   bottom: 0;
+   height: 100%;
+   width: 100%;
+   background: #333;
+   display: none;
+   animation-name: popUpModal;
+   animation-duration: 1s;
+   animation-timing-function: ease-out;
+   opacity: 0.9;
+
+   .modal-content {
+      label, input, select {
+
+         display: block;
+         width: 100%;
+      }
+
+      input {
+         text-align: center;
+         margin-top: 3px;
+      }
+   }
+
+   .modal-container {
+      width: 300px;
+      background: #fff;
+      margin: 16% auto 0;
+      padding: 20px;
+   }
+
+   .modal-container .title {
+      @include flex(space-between);
+      margin-bottom: 10px;
+
+      i {
+         font-size: 23px;
+
+         &:hover {
+            opacity: 0.6;
+            cursor: pointer;
+         }
+      }
+
+      p {
+         color: $header-txt;
+         font-size: 19px;
+      }
+   }
+
+   .modal-btns {
+      margin-top: 15px;
+      text-align: center;
+
+      .btn {
+         width: 120px;
+      }
+   }
+}
+
+.to-alert {
+   text-align: center;
+   padding: 5px;
+   font-size: 20px;
+   width: 370px;
+   border-radius: 5px;
+   margin: 0 auto 5px;
+}
+
+@keyframes popUpModal {
+   from {
+      opacity: 0;
+   }
+   to {
+      opacity: 0.9;
+   }
+}
